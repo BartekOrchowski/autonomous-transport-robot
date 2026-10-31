@@ -27,3 +27,5 @@ env/
 # Operating system
 .DS_Store
 Thumbs.db
+# Camera captures
+/images/
