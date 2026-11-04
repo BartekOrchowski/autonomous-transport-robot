@@ -24,6 +24,7 @@ camera = subprocess.Popen(
         "--timeout", "0",
         "--nopreview",
         "--codec", "yuv420",
+        "--mode", "1640:1232",
         "--width", str(WIDTH),
         "--height", str(HEIGHT),
         "--framerate", str(FPS),
