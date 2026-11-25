@@ -64,10 +64,61 @@
               </effect>
               <trigger xmi:type="uml:Trigger" xmi:id="_4_k00OkOEfGet-f1W4k-Hw" name="onArUcoDetected" event="_yq-DMOkOEfGet-f1W4k-Hw"/>
             </transition>
+            <transition xmi:type="uml:Transition" xmi:id="_C7cOwOkUEfGmF6OFxmc3zQ" name="T_Junction_to_Branch" source="_TOIo4OkOEfGet-f1W4k-Hw" target="_58CDwOkTEfGmF6OFxmc3zQ"/>
+            <transition xmi:type="uml:Transition" xmi:id="__tq1wOkUEfGmF6OFxmc3zQ" name="T_Branch_to_TurnAround" guard="_fDwH0OkVEfGmF6OFxmc3zQ" source="_58CDwOkTEfGmF6OFxmc3zQ" target="_lGTVkOkUEfGmF6OFxmc3zQ">
+              <ownedRule xmi:type="uml:Constraint" xmi:id="_fDwH0OkVEfGmF6OFxmc3zQ" name="DestinationMarkerDetected">
+                <specification xmi:type="uml:OpaqueExpression" xmi:id="_fDx9AOkVEfGmF6OFxmc3zQ" name="CheckDestinationMarker">
+                  <language>pseudocode</language>
+                  <body>lastMarkerId == destinationId</body>
+                </specification>
+              </ownedRule>
+              <effect xmi:type="uml:OpaqueBehavior" xmi:id="_yP3XYOkVEfGmF6OFxmc3zQ" name="StopAtDestination">
+                <language>pseudocode</language>
+                <body>stopMotors()</body>
+              </effect>
+              <trigger xmi:type="uml:Trigger" xmi:id="_LTJrIOkVEfGmF6OFxmc3zQ" name="onArUcoDetected" event="_yq-DMOkOEfGet-f1W4k-Hw"/>
+            </transition>
+            <transition xmi:type="uml:Transition" xmi:id="_rtXeQOkWEfGmF6OFxmc3zQ" name="T_TurnAround_to_DropPackage" source="_lGTVkOkUEfGmF6OFxmc3zQ" target="_mTQmAOkWEfGmF6OFxmc3zQ"/>
+            <transition xmi:type="uml:Transition" xmi:id="_St23QOkXEfGmF6OFxmc3zQ" name="T_DropPackage_to_ReturnJunction" source="_mTQmAOkWEfGmF6OFxmc3zQ" target="_MjQ9QOkXEfGmF6OFxmc3zQ"/>
+            <transition xmi:type="uml:Transition" xmi:id="_0VhxcOkXEfGmF6OFxmc3zQ" source="_MjQ9QOkXEfGmF6OFxmc3zQ" target="_wNEuUOkXEfGmF6OFxmc3zQ"/>
             <subvertex xmi:type="uml:Pseudostate" xmi:id="_P4DQIOkJEfGdjNdesuPUng" name="Initial"/>
             <subvertex xmi:type="uml:State" xmi:id="_Sa6OcOkJEfGdjNdesuPUng" name="WAIT_FOR_RFID"/>
             <subvertex xmi:type="uml:State" xmi:id="_DObnwOkKEfGdjNdesuPUng" name="FOLLOW_MAIN_LINE"/>
-            <subvertex xmi:type="uml:State" xmi:id="_TOIo4OkOEfGet-f1W4k-Hw" name="HANDLE_JUNCTION"/>
+            <subvertex xmi:type="uml:State" xmi:id="_TOIo4OkOEfGet-f1W4k-Hw" name="HANDLE_JUNCTION">
+              <doActivity xmi:type="uml:OpaqueBehavior" xmi:id="_pgbM8OkTEfGmF6OFxmc3zQ" name="ExecuteTurn">
+                <language>pseudocode</language>
+                <body>executeTurn(selectedRoute)</body>
+              </doActivity>
+              <entry xmi:type="uml:OpaqueBehavior" xmi:id="_bkig4OkTEfGmF6OFxmc3zQ" name="SelectRoute">
+                <language>pseudocode</language>
+                <body>selectedRoute = selectRoute(destinationId)</body>
+              </entry>
+            </subvertex>
+            <subvertex xmi:type="uml:State" xmi:id="_58CDwOkTEfGmF6OFxmc3zQ" name="FOLLOW_BRANCH">
+              <doActivity xmi:type="uml:OpaqueBehavior" xmi:id="_R45skOkUEfGmF6OFxmc3zQ" name="FollowBranchLine">
+                <language>pseudocode</language>
+                <body>followLineAndMonitorMarkers()</body>
+              </doActivity>
+            </subvertex>
+            <subvertex xmi:type="uml:State" xmi:id="_lGTVkOkUEfGmF6OFxmc3zQ" name="TURN_AROUND">
+              <doActivity xmi:type="uml:OpaqueBehavior" xmi:id="_Ux0IgOkWEfGmF6OFxmc3zQ" name="Rotate180">
+                <language>pseudocode</language>
+                <body>rotateRobot(180)</body>
+              </doActivity>
+            </subvertex>
+            <subvertex xmi:type="uml:State" xmi:id="_mTQmAOkWEfGmF6OFxmc3zQ" name="DROP_PACKAGE">
+              <doActivity xmi:type="uml:OpaqueBehavior" xmi:id="_80jBoOkWEfGmF6OFxmc3zQ" name="ExecutePackageDrop">
+                <language>pseudocode</language>
+                <body>releasePackage()</body>
+              </doActivity>
+            </subvertex>
+            <subvertex xmi:type="uml:State" xmi:id="_MjQ9QOkXEfGmF6OFxmc3zQ" name="RETURN_TO_JUNCTION">
+              <doActivity xmi:type="uml:OpaqueBehavior" xmi:id="_lUwg8OkXEfGmF6OFxmc3zQ" name="FollowReturnLine">
+                <language>pseudocode</language>
+                <body>followLineAndMonitorMarkers()</body>
+              </doActivity>
+            </subvertex>
+            <subvertex xmi:type="uml:State" xmi:id="_wNEuUOkXEfGmF6OFxmc3zQ" name="HANDLE_RETURN_JUNCTION"/>
           </region>
         </ownedBehavior>
       </packagedElement>
