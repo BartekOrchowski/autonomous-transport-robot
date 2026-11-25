@@ -35,8 +35,40 @@
       <packagedElement xmi:type="uml:Class" xmi:id="_wTDrQOj7EfGdjNdesuPUng" name="RFIDReader"/>
       <packagedElement xmi:type="uml:Class" xmi:id="_wjy18Oj7EfGdjNdesuPUng" name="DropController"/>
       <packagedElement xmi:type="uml:Class" xmi:id="_ynZFYOj7EfGdjNdesuPUng" name="RobotController" classifierBehavior="_GMPy0OkBEfGdjNdesuPUng">
-        <ownedBehavior xmi:type="uml:StateMachine" xmi:id="_GMPy0OkBEfGdjNdesuPUng" name="StateMachine1">
-          <region xmi:type="uml:Region" xmi:id="_LpW7wOkBEfGdjNdesuPUng" name="Region1"/>
+        <ownedBehavior xmi:type="uml:StateMachine" xmi:id="_GMPy0OkBEfGdjNdesuPUng" name="SM_RobotController">
+          <region xmi:type="uml:Region" xmi:id="_LpW7wOkBEfGdjNdesuPUng" name="Region1">
+            <transition xmi:type="uml:Transition" xmi:id="_enLXAOkJEfGdjNdesuPUng" source="_P4DQIOkJEfGdjNdesuPUng" target="_Sa6OcOkJEfGdjNdesuPUng"/>
+            <transition xmi:type="uml:Transition" xmi:id="_ID0pYOkKEfGdjNdesuPUng" name="T_RFID_to_FOLLOW_MAIN_LINE" guard="_ajrlAOkMEfGet-f1W4k-Hw" source="_Sa6OcOkJEfGdjNdesuPUng" target="_DObnwOkKEfGdjNdesuPUng">
+              <ownedRule xmi:type="uml:Constraint" xmi:id="_ajrlAOkMEfGet-f1W4k-Hw" name="ValidRFID">
+                <specification xmi:type="uml:OpaqueExpression" xmi:id="_ajsMEOkMEfGet-f1W4k-Hw" name="CheckValidRFID">
+                  <language>pseudocode</language>
+                  <body>isValidUID(lastUid)</body>
+                </specification>
+              </ownedRule>
+              <effect xmi:type="uml:OpaqueBehavior" xmi:id="_zbIKQOkNEfGet-f1W4k-Hw" name="AssignDestination">
+                <language>pseudocode</language>
+                <body>setDestinationFromUID(lastUid)</body>
+              </effect>
+              <trigger xmi:type="uml:Trigger" xmi:id="_nAmOIOkLEfGet-f1W4k-Hw" name="onRFIDRead" event="_P3SJMOkLEfGet-f1W4k-Hw"/>
+            </transition>
+            <transition xmi:type="uml:Transition" xmi:id="_ZCNgUOkOEfGet-f1W4k-Hw" name="T_MainLine_to_Junction" guard="_DkCSEOkPEfGet-f1W4k-Hw" source="_DObnwOkKEfGdjNdesuPUng" target="_TOIo4OkOEfGet-f1W4k-Hw">
+              <ownedRule xmi:type="uml:Constraint" xmi:id="_DkCSEOkPEfGet-f1W4k-Hw" name="JunctionMarkerDetected">
+                <specification xmi:type="uml:OpaqueExpression" xmi:id="_DkC5IOkPEfGet-f1W4k-Hw" name="constrain">
+                  <language>pseudocode</language>
+                  <body>lastMarkerId == 1</body>
+                </specification>
+              </ownedRule>
+              <effect xmi:type="uml:OpaqueBehavior" xmi:id="_MUoIgOkQEfGet-f1W4k-Hw" name="StopAtJunction">
+                <language>pseudocode</language>
+                <body>stopMotors()</body>
+              </effect>
+              <trigger xmi:type="uml:Trigger" xmi:id="_4_k00OkOEfGet-f1W4k-Hw" name="onArUcoDetected" event="_yq-DMOkOEfGet-f1W4k-Hw"/>
+            </transition>
+            <subvertex xmi:type="uml:Pseudostate" xmi:id="_P4DQIOkJEfGdjNdesuPUng" name="Initial"/>
+            <subvertex xmi:type="uml:State" xmi:id="_Sa6OcOkJEfGdjNdesuPUng" name="WAIT_FOR_RFID"/>
+            <subvertex xmi:type="uml:State" xmi:id="_DObnwOkKEfGdjNdesuPUng" name="FOLLOW_MAIN_LINE"/>
+            <subvertex xmi:type="uml:State" xmi:id="_TOIo4OkOEfGet-f1W4k-Hw" name="HANDLE_JUNCTION"/>
+          </region>
         </ownedBehavior>
       </packagedElement>
       <packagedElement xmi:type="uml:Association" xmi:id="_48waEOj9EfGdjNdesuPUng" memberEnd="_48xBIej9EfGdjNdesuPUng _48xBJOj9EfGdjNdesuPUng">
@@ -70,7 +102,12 @@
         <ownedEnd xmi:type="uml:Property" xmi:id="_PdAB8ekAEfGdjNdesuPUng" name="" type="_co0VQOj7EfGdjNdesuPUng" association="_Pc-MwOkAEfGdjNdesuPUng"/>
       </packagedElement>
     </packagedElement>
-    <packagedElement xmi:type="uml:Package" xmi:id="_7mzF0Oj6EfGdjNdesuPUng" name="02_Controller_Behavior"/>
+    <packagedElement xmi:type="uml:Package" xmi:id="_7mzF0Oj6EfGdjNdesuPUng" name="02_Controller_Behavior">
+      <packagedElement xmi:type="uml:Signal" xmi:id="_Jkt-8OkLEfGet-f1W4k-Hw" name="RFID_READ"/>
+      <packagedElement xmi:type="uml:SignalEvent" xmi:id="_P3SJMOkLEfGet-f1W4k-Hw" name="EV_RFID_READ" signal="_Jkt-8OkLEfGet-f1W4k-Hw"/>
+      <packagedElement xmi:type="uml:Signal" xmi:id="_vM9EMOkOEfGet-f1W4k-Hw" name="ARUCO_DETECTED"/>
+      <packagedElement xmi:type="uml:SignalEvent" xmi:id="_yq-DMOkOEfGet-f1W4k-Hw" name="EV_ARUCO_DETECTED" signal="_vM9EMOkOEfGet-f1W4k-Hw"/>
+    </packagedElement>
     <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_HzN00Oj6EfGdjNdesuPUng">
       <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_HzWXsOj6EfGdjNdesuPUng" source="http://www.eclipse.org/uml2/2.0.0/UML">
         <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/sysml/1.6/SysML#/"/>
