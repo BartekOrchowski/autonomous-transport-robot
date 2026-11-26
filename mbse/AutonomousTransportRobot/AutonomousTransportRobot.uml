@@ -80,7 +80,34 @@
             </transition>
             <transition xmi:type="uml:Transition" xmi:id="_rtXeQOkWEfGmF6OFxmc3zQ" name="T_TurnAround_to_DropPackage" source="_lGTVkOkUEfGmF6OFxmc3zQ" target="_mTQmAOkWEfGmF6OFxmc3zQ"/>
             <transition xmi:type="uml:Transition" xmi:id="_St23QOkXEfGmF6OFxmc3zQ" name="T_DropPackage_to_ReturnJunction" source="_mTQmAOkWEfGmF6OFxmc3zQ" target="_MjQ9QOkXEfGmF6OFxmc3zQ"/>
-            <transition xmi:type="uml:Transition" xmi:id="_0VhxcOkXEfGmF6OFxmc3zQ" source="_MjQ9QOkXEfGmF6OFxmc3zQ" target="_wNEuUOkXEfGmF6OFxmc3zQ"/>
+            <transition xmi:type="uml:Transition" xmi:id="_0VhxcOkXEfGmF6OFxmc3zQ" name="T_ReturnToJunction_to_HandleReturn" guard="_0Gsm0Om9EfGuZY2fj6coJw" source="_MjQ9QOkXEfGmF6OFxmc3zQ" target="_wNEuUOkXEfGmF6OFxmc3zQ">
+              <ownedRule xmi:type="uml:Constraint" xmi:id="_0Gsm0Om9EfGuZY2fj6coJw" name="ReturnJunctionDetected">
+                <specification xmi:type="uml:OpaqueExpression" xmi:id="_0GtN4Om9EfGuZY2fj6coJw" name="CheckReturnJunction">
+                  <language>pseudocode</language>
+                  <body>lastMarkerId == 1</body>
+                </specification>
+              </ownedRule>
+              <effect xmi:type="uml:OpaqueBehavior" xmi:id="_eecE8Om9EfGuZY2fj6coJw" name="StopAtReturnJunction">
+                <language>pseudocode</language>
+                <body>stopMotors()</body>
+              </effect>
+              <trigger xmi:type="uml:Trigger" xmi:id="_EoYs8Om9EfGuZY2fj6coJw" name="onArUcoDetected" event="_yq-DMOkOEfGet-f1W4k-Hw"/>
+            </transition>
+            <transition xmi:type="uml:Transition" xmi:id="_8FGdQOm8EfGuZY2fj6coJw" name="T_ReturnJunction_to_Home" source="_wNEuUOkXEfGmF6OFxmc3zQ" target="_5JmVcOm8EfGuZY2fj6coJw"/>
+            <transition xmi:type="uml:Transition" xmi:id="_WFEJwOm-EfGuZY2fj6coJw" name="T_ReturnHome_to_WaitForRFID" guard="_wv5NoOm-EfGuZY2fj6coJw" source="_5JmVcOm8EfGuZY2fj6coJw" target="_Sa6OcOkJEfGdjNdesuPUng">
+              <ownedRule xmi:type="uml:Constraint" xmi:id="_wv5NoOm-EfGuZY2fj6coJw" name="HomeMarkerDetected">
+                <specification xmi:type="uml:OpaqueExpression" xmi:id="_wv50sOm-EfGuZY2fj6coJw" name="CheckHomeMarker">
+                  <language>pseudocode</language>
+                  <body>lastMarkerId == 0</body>
+                </specification>
+              </ownedRule>
+              <effect xmi:type="uml:OpaqueBehavior" xmi:id="_552bwOm-EfGuZY2fj6coJw" name="StopAndResetDelivery">
+                <language>pseudocode</language>
+                <body>stopMotors()
+clearDeliveryContext()</body>
+              </effect>
+              <trigger xmi:type="uml:Trigger" xmi:id="_ra6F8Om-EfGuZY2fj6coJw" name="onArUcoDetected" event="_yq-DMOkOEfGet-f1W4k-Hw"/>
+            </transition>
             <subvertex xmi:type="uml:Pseudostate" xmi:id="_P4DQIOkJEfGdjNdesuPUng" name="Initial"/>
             <subvertex xmi:type="uml:State" xmi:id="_Sa6OcOkJEfGdjNdesuPUng" name="WAIT_FOR_RFID"/>
             <subvertex xmi:type="uml:State" xmi:id="_DObnwOkKEfGdjNdesuPUng" name="FOLLOW_MAIN_LINE"/>
@@ -118,7 +145,22 @@
                 <body>followLineAndMonitorMarkers()</body>
               </doActivity>
             </subvertex>
-            <subvertex xmi:type="uml:State" xmi:id="_wNEuUOkXEfGmF6OFxmc3zQ" name="HANDLE_RETURN_JUNCTION"/>
+            <subvertex xmi:type="uml:State" xmi:id="_wNEuUOkXEfGmF6OFxmc3zQ" name="HANDLE_RETURN_JUNCTION">
+              <doActivity xmi:type="uml:OpaqueBehavior" xmi:id="_sspFgOm8EfGuZY2fj6coJw" name="ExecuteReturnTurn">
+                <language>pseudocode</language>
+                <body>executeTurn(selectedRoute)</body>
+              </doActivity>
+              <entry xmi:type="uml:OpaqueBehavior" xmi:id="_X_TTwOm8EfGuZY2fj6coJw" name="SelectHomeRoute">
+                <language>pseudocode</language>
+                <body>selectedRoute = selectHomeRoute(destinationId)</body>
+              </entry>
+            </subvertex>
+            <subvertex xmi:type="uml:State" xmi:id="_5JmVcOm8EfGuZY2fj6coJw" name="RETURN_HOME">
+              <doActivity xmi:type="uml:OpaqueBehavior" xmi:id="_HQKLAOm-EfGuZY2fj6coJw" name="FollowHomeLine">
+                <language>pseudocode</language>
+                <body>followLineAndMonitorMarkers()</body>
+              </doActivity>
+            </subvertex>
           </region>
         </ownedBehavior>
       </packagedElement>

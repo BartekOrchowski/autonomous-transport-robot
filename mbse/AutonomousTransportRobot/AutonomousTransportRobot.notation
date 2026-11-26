@@ -568,7 +568,7 @@
   <notation:Diagram xmi:id="_LpYJ4OkBEfGdjNdesuPUng" type="PapyrusUMLStateMachineDiagram" name="STM_RobotController" measurementUnit="Pixel">
     <children xmi:type="notation:Shape" xmi:id="_LpYJ4ekBEfGdjNdesuPUng" type="StateMachine_Shape">
       <children xmi:type="notation:DecorationNode" xmi:id="_LpYJ4ukBEfGdjNdesuPUng" type="StateMachine_NameLabel">
-        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_LpYJ4-kBEfGdjNdesuPUng" width="1259" height="21"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_LpYJ4-kBEfGdjNdesuPUng" width="1355" height="21"/>
       </children>
       <children xmi:type="notation:BasicCompartment" xmi:id="_LpYJ5OkBEfGdjNdesuPUng" type="StateMachine_RegionCompartment">
         <children xmi:type="notation:Shape" xmi:id="_LpYJ5ekBEfGdjNdesuPUng" type="Region_Shape">
@@ -584,7 +584,7 @@
                 <layoutConstraint xmi:type="notation:Location" xmi:id="_P4Hhk-kJEfGdjNdesuPUng" x="25" y="-10"/>
               </children>
               <element xmi:type="uml:Pseudostate" href="AutonomousTransportRobot.uml#_P4DQIOkJEfGdjNdesuPUng"/>
-              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_P4G6gekJEfGdjNdesuPUng" x="9" y="9"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_P4G6gekJEfGdjNdesuPUng" x="4" y="35"/>
             </children>
             <children xmi:type="notation:Shape" xmi:id="_Sa9RwOkJEfGdjNdesuPUng" type="State_Shape">
               <children xmi:type="notation:DecorationNode" xmi:id="_Sa940OkJEfGdjNdesuPUng" type="State_NameLabel"/>
@@ -717,18 +717,49 @@
               <children xmi:type="notation:BasicCompartment" xmi:id="_wNMDFekXEfGmF6OFxmc3zQ" type="State_RegionCompartment">
                 <layoutConstraint xmi:type="notation:Bounds" xmi:id="_wNMDFukXEfGmF6OFxmc3zQ"/>
               </children>
+              <children xmi:type="notation:BasicCompartment" xmi:id="_SYZVoOm8EfGuZY2fj6coJw" type="compartment_shape_display">
+                <styles xmi:type="notation:TitleStyle" xmi:id="_SYZVoem8EfGuZY2fj6coJw"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_SYZVoum8EfGuZY2fj6coJw"/>
+              </children>
+              <children xmi:type="notation:Shape" xmi:id="_ajJwkOm8EfGuZY2fj6coJw" type="Behavior_EntryBehaviorLabel">
+                <element xmi:type="uml:OpaqueBehavior" href="AutonomousTransportRobot.uml#_X_TTwOm8EfGuZY2fj6coJw"/>
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_ajJwkem8EfGuZY2fj6coJw" x="-10" y="-10"/>
+              </children>
+              <children xmi:type="notation:Shape" xmi:id="_u1rOkOm8EfGuZY2fj6coJw" type="Behavior_DoActivityBehaviorLabel">
+                <element xmi:type="uml:OpaqueBehavior" href="AutonomousTransportRobot.uml#_sspFgOm8EfGuZY2fj6coJw"/>
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_u1rOkem8EfGuZY2fj6coJw" x="-10" y="-10"/>
+              </children>
               <element xmi:type="uml:State" href="AutonomousTransportRobot.uml#_wNEuUOkXEfGmF6OFxmc3zQ"/>
-              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_wNMDEekXEfGmF6OFxmc3zQ" x="591" y="511"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_wNMDEekXEfGmF6OFxmc3zQ" x="584" y="495"/>
+            </children>
+            <children xmi:type="notation:Shape" xmi:id="_5KBzQOm8EfGuZY2fj6coJw" type="State_Shape">
+              <children xmi:type="notation:DecorationNode" xmi:id="_5KCaUOm8EfGuZY2fj6coJw" type="State_NameLabel"/>
+              <children xmi:type="notation:DecorationNode" xmi:id="_5KCaUem8EfGuZY2fj6coJw" type="State_FloatingNameLabel">
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_5KCaUum8EfGuZY2fj6coJw" x="40"/>
+              </children>
+              <children xmi:type="notation:BasicCompartment" xmi:id="_5KCaU-m8EfGuZY2fj6coJw" type="State_RegionCompartment">
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_5KCaVOm8EfGuZY2fj6coJw"/>
+              </children>
+              <children xmi:type="notation:BasicCompartment" xmi:id="_5KRD0Om8EfGuZY2fj6coJw" type="compartment_shape_display">
+                <styles xmi:type="notation:TitleStyle" xmi:id="_5KRD0em8EfGuZY2fj6coJw"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_5KRD0um8EfGuZY2fj6coJw"/>
+              </children>
+              <children xmi:type="notation:Shape" xmi:id="_JjOZ0Om-EfGuZY2fj6coJw" type="Behavior_DoActivityBehaviorLabel">
+                <element xmi:type="uml:OpaqueBehavior" href="AutonomousTransportRobot.uml#_HQKLAOm-EfGuZY2fj6coJw"/>
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_JjOZ0em-EfGuZY2fj6coJw" x="-10" y="-10"/>
+              </children>
+              <element xmi:type="uml:State" href="AutonomousTransportRobot.uml#_5JmVcOm8EfGuZY2fj6coJw"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_5KBzQem8EfGuZY2fj6coJw" x="1044" y="495"/>
             </children>
             <layoutConstraint xmi:type="notation:Bounds" xmi:id="_LpYJ6ekBEfGdjNdesuPUng"/>
           </children>
           <element xmi:type="uml:Region" href="AutonomousTransportRobot.uml#_LpW7wOkBEfGdjNdesuPUng"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_LpYJ6ukBEfGdjNdesuPUng" width="1259" height="598"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_LpYJ6ukBEfGdjNdesuPUng" width="1355" height="731"/>
         </children>
-        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_LpYJ6-kBEfGdjNdesuPUng" y="21" width="1259" height="598"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_LpYJ6-kBEfGdjNdesuPUng" y="21" width="1355" height="731"/>
       </children>
       <element xmi:type="uml:StateMachine" href="AutonomousTransportRobot.uml#_GMPy0OkBEfGdjNdesuPUng"/>
-      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_LpYJ7OkBEfGdjNdesuPUng" x="30" y="30" width="1259" height="619"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_LpYJ7OkBEfGdjNdesuPUng" x="30" y="30" width="1355" height="752"/>
     </children>
     <styles xmi:type="notation:StringValueStyle" xmi:id="_LpYJ7ekBEfGdjNdesuPUng" name="diagram_compatibility_version" stringValue="1.4.0"/>
     <styles xmi:type="notation:DiagramStyle" xmi:id="_LpYJ7ukBEfGdjNdesuPUng"/>
@@ -789,9 +820,9 @@
       </children>
       <styles xmi:type="notation:FontStyle" xmi:id="_ZCWqQekOEfGet-f1W4k-Hw"/>
       <element xmi:type="uml:Transition" href="AutonomousTransportRobot.uml#_ZCNgUOkOEfGet-f1W4k-Hw"/>
-      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_ZCWqQukOEfGet-f1W4k-Hw" points="[660, 100, -643984, -643984]$[900, 100, -643984, -643984]$[980, 108, -643984, -643984]"/>
-      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_ZC6D4OkOEfGet-f1W4k-Hw" id="(0.9917355371900827,0.4444444444444444)"/>
-      <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_ZC6D4ekOEfGet-f1W4k-Hw" id="(0.0,0.5194805194805194)"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_ZCWqQukOEfGet-f1W4k-Hw" points="[564, 113, -643984, -643984]$[1024, 120, -643984, -643984]"/>
+      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_ZC6D4OkOEfGet-f1W4k-Hw" id="(0.9834710743801653,0.4)"/>
+      <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_ZC6D4ekOEfGet-f1W4k-Hw" id="(0.0,0.5974025974025974)"/>
     </edges>
     <edges xmi:type="notation:Connector" xmi:id="_C7tUgOkUEfGmF6OFxmc3zQ" type="Transition_Edge" source="_TORy0OkOEfGet-f1W4k-Hw" target="_58ORAOkTEfGmF6OFxmc3zQ">
       <children xmi:type="notation:DecorationNode" xmi:id="_C7tUg-kUEfGmF6OFxmc3zQ" type="Transition_NameLabel">
@@ -808,9 +839,9 @@
       </children>
       <styles xmi:type="notation:FontStyle" xmi:id="_C7tUgekUEfGmF6OFxmc3zQ"/>
       <element xmi:type="uml:Transition" href="AutonomousTransportRobot.uml#_C7cOwOkUEfGmF6OFxmc3zQ"/>
-      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_C7tUgukUEfGmF6OFxmc3zQ" points="[1140, 136, -643984, -643984]$[1140, 260, -643984, -643984]$[100, 260, -643984, -643984]$[100, 380, -643984, -643984]$[140, 380, -643984, -643984]"/>
-      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_C8GWEOkUEfGmF6OFxmc3zQ" id="(0.5429864253393665,0.987012987012987)"/>
-      <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_C8GWEekUEfGmF6OFxmc3zQ" id="(0.0,0.32786885245901637)"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_C7tUgukUEfGmF6OFxmc3zQ" points="[1140, 149, -643984, -643984]$[1140, 260, -643984, -643984]$[100, 260, -643984, -643984]$[100, 400, -643984, -643984]$[144, 400, -643984, -643984]"/>
+      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_C8GWEOkUEfGmF6OFxmc3zQ" id="(0.5203619909502263,0.961038961038961)"/>
+      <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_C8GWEekUEfGmF6OFxmc3zQ" id="(0.0,0.4262295081967213)"/>
     </edges>
     <edges xmi:type="notation:Connector" xmi:id="__tyKgOkUEfGmF6OFxmc3zQ" type="Transition_Edge" source="_58ORAOkTEfGmF6OFxmc3zQ" target="_lGbRYOkUEfGmF6OFxmc3zQ">
       <children xmi:type="notation:DecorationNode" xmi:id="__tyKg-kUEfGmF6OFxmc3zQ" type="Transition_NameLabel">
@@ -865,9 +896,9 @@
       </children>
       <styles xmi:type="notation:FontStyle" xmi:id="_SuAoQekXEfGmF6OFxmc3zQ"/>
       <element xmi:type="uml:Transition" href="AutonomousTransportRobot.uml#_St23QOkXEfGmF6OFxmc3zQ"/>
-      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_SuAoQukXEfGmF6OFxmc3zQ" points="[1140, 420, -643984, -643984]$[1140, 500, -643984, -643984]$[100, 500, -643984, -643984]$[100, 560, -643984, -643984]$[160, 560, -643984, -643984]"/>
-      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_SuS8IOkXEfGmF6OFxmc3zQ" id="(0.5309734513274337,0.9836065573770492)"/>
-      <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_SuS8IekXEfGmF6OFxmc3zQ" id="(0.0,0.4444444444444444)"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_SuAoQukXEfGmF6OFxmc3zQ" points="[1140, 433, -643984, -643984]$[1140, 500, -643984, -643984]$[100, 500, -643984, -643984]$[100, 581, -643984, -643984]$[164, 580, -643984, -643984]"/>
+      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_SuS8IOkXEfGmF6OFxmc3zQ" id="(0.5088495575221239,0.9508196721311475)"/>
+      <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_SuS8IekXEfGmF6OFxmc3zQ" id="(0.0,0.4262295081967213)"/>
     </edges>
     <edges xmi:type="notation:Connector" xmi:id="_0VqUUOkXEfGmF6OFxmc3zQ" type="Transition_Edge" source="_MjYSAOkXEfGmF6OFxmc3zQ" target="_wNMDEOkXEfGmF6OFxmc3zQ">
       <children xmi:type="notation:DecorationNode" xmi:id="_0VqUU-kXEfGmF6OFxmc3zQ" type="Transition_NameLabel">
@@ -887,6 +918,44 @@
       <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_0VqUUukXEfGmF6OFxmc3zQ" points="[366, 580, -643984, -643984]$[620, 560, -643984, -643984]"/>
       <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_0V5k4OkXEfGmF6OFxmc3zQ" id="(1.0,0.6557377049180327)"/>
       <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_0V5k4ekXEfGmF6OFxmc3zQ" id="(0.0,0.4444444444444444)"/>
+    </edges>
+    <edges xmi:type="notation:Connector" xmi:id="_8FgF4Om8EfGuZY2fj6coJw" type="Transition_Edge" source="_wNMDEOkXEfGmF6OFxmc3zQ" target="_5KBzQOm8EfGuZY2fj6coJw">
+      <children xmi:type="notation:DecorationNode" xmi:id="_8Fgs8Om8EfGuZY2fj6coJw" type="Transition_NameLabel">
+        <styles xmi:type="notation:BooleanValueStyle" xmi:id="_SIsa0Om-EfGuZY2fj6coJw" name="IS_UPDATED_POSITION" booleanValue="true"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_8Fgs8em8EfGuZY2fj6coJw" y="19"/>
+      </children>
+      <children xmi:type="notation:DecorationNode" xmi:id="_8Fgs8um8EfGuZY2fj6coJw" type="Transition_GuardLabel">
+        <styles xmi:type="notation:BooleanValueStyle" xmi:id="_SI52MOm-EfGuZY2fj6coJw" name="IS_UPDATED_POSITION" booleanValue="true"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_8Fgs8-m8EfGuZY2fj6coJw" x="1" y="-18"/>
+      </children>
+      <children xmi:type="notation:DecorationNode" xmi:id="_8FhUAOm8EfGuZY2fj6coJw" type="Transition_StereotypeLabel">
+        <styles xmi:type="notation:BooleanValueStyle" xmi:id="_SJH4oOm-EfGuZY2fj6coJw" name="IS_UPDATED_POSITION" booleanValue="true"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_8FhUAem8EfGuZY2fj6coJw" y="59"/>
+      </children>
+      <styles xmi:type="notation:FontStyle" xmi:id="_8FgF4em8EfGuZY2fj6coJw"/>
+      <element xmi:type="uml:Transition" href="AutonomousTransportRobot.uml#_8FGdQOm8EfGuZY2fj6coJw"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_8FgF4um8EfGuZY2fj6coJw" points="[842, 600, -643984, -643984]$[1080, 580, -643984, -643984]"/>
+      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_8GLbUOm8EfGuZY2fj6coJw" id="(1.0,0.5194805194805194)"/>
+      <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_8GMCYOm8EfGuZY2fj6coJw" id="(0.0,0.4444444444444444)"/>
+    </edges>
+    <edges xmi:type="notation:Connector" xmi:id="_WFPv8Om-EfGuZY2fj6coJw" type="Transition_Edge" source="_5KBzQOm8EfGuZY2fj6coJw" target="_Sa9RwOkJEfGdjNdesuPUng">
+      <children xmi:type="notation:DecorationNode" xmi:id="_WFPv8-m-EfGuZY2fj6coJw" type="Transition_NameLabel">
+        <styles xmi:type="notation:BooleanValueStyle" xmi:id="_XSBFEOm-EfGuZY2fj6coJw" name="IS_UPDATED_POSITION" booleanValue="true"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_WFQXAOm-EfGuZY2fj6coJw" x="-1" y="18"/>
+      </children>
+      <children xmi:type="notation:DecorationNode" xmi:id="_WFQXAem-EfGuZY2fj6coJw" type="Transition_GuardLabel">
+        <styles xmi:type="notation:BooleanValueStyle" xmi:id="_XSJn8Om-EfGuZY2fj6coJw" name="IS_UPDATED_POSITION" booleanValue="true"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_WFQXAum-EfGuZY2fj6coJw" y="-19"/>
+      </children>
+      <children xmi:type="notation:DecorationNode" xmi:id="_WFQXA-m-EfGuZY2fj6coJw" type="Transition_StereotypeLabel">
+        <styles xmi:type="notation:BooleanValueStyle" xmi:id="_XSRjwOm-EfGuZY2fj6coJw" name="IS_UPDATED_POSITION" booleanValue="true"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_WFQXBOm-EfGuZY2fj6coJw" x="-1" y="58"/>
+      </children>
+      <styles xmi:type="notation:FontStyle" xmi:id="_WFPv8em-EfGuZY2fj6coJw"/>
+      <element xmi:type="uml:Transition" href="AutonomousTransportRobot.uml#_WFEJwOm-EfGuZY2fj6coJw"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_WFPv8um-EfGuZY2fj6coJw" points="[1184, 620, -643984, -643984]$[1184, 720, -643984, -643984]$[60, 720, -643984, -643984]$[60, 320, -643984, -643984]$[60, 184, -643984, -643984]$[200, 184, -643984, -643984]$[200, 137, -643984, -643984]"/>
+      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_WFoKcOm-EfGuZY2fj6coJw" id="(0.5098039215686274,0.9836065573770492)"/>
+      <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_WFoKcem-EfGuZY2fj6coJw" id="(0.5729166666666666,0.9333333333333333)"/>
     </edges>
   </notation:Diagram>
 </xmi:XMI>
