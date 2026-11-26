@@ -605,6 +605,14 @@
               <children xmi:type="notation:BasicCompartment" xmi:id="_DOggQ-kKEfGdjNdesuPUng" type="State_RegionCompartment">
                 <layoutConstraint xmi:type="notation:Bounds" xmi:id="_DOggROkKEfGdjNdesuPUng"/>
               </children>
+              <children xmi:type="notation:BasicCompartment" xmi:id="_SX7bkOm8EfGuZY2fj6coJw" type="compartment_shape_display">
+                <styles xmi:type="notation:TitleStyle" xmi:id="_SX7bkem8EfGuZY2fj6coJw"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_SX7bkum8EfGuZY2fj6coJw"/>
+              </children>
+              <children xmi:type="notation:Shape" xmi:id="_m51SAOm_EfGuZY2fj6coJw" type="Behavior_DoActivityBehaviorLabel">
+                <element xmi:type="uml:OpaqueBehavior" href="AutonomousTransportRobot.uml#_kNu4IOm_EfGuZY2fj6coJw"/>
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_m51SAem_EfGuZY2fj6coJw" x="-10" y="-10"/>
+              </children>
               <element xmi:type="uml:State" href="AutonomousTransportRobot.uml#_DObnwOkKEfGdjNdesuPUng"/>
               <layoutConstraint xmi:type="notation:Bounds" xmi:id="_DOf5MekKEfGdjNdesuPUng" x="409" y="29"/>
             </children>

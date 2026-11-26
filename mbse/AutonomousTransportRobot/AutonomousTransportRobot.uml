@@ -110,7 +110,12 @@ clearDeliveryContext()</body>
             </transition>
             <subvertex xmi:type="uml:Pseudostate" xmi:id="_P4DQIOkJEfGdjNdesuPUng" name="Initial"/>
             <subvertex xmi:type="uml:State" xmi:id="_Sa6OcOkJEfGdjNdesuPUng" name="WAIT_FOR_RFID"/>
-            <subvertex xmi:type="uml:State" xmi:id="_DObnwOkKEfGdjNdesuPUng" name="FOLLOW_MAIN_LINE"/>
+            <subvertex xmi:type="uml:State" xmi:id="_DObnwOkKEfGdjNdesuPUng" name="FOLLOW_MAIN_LINE">
+              <doActivity xmi:type="uml:OpaqueBehavior" xmi:id="_kNu4IOm_EfGuZY2fj6coJw" name="FollowMainLine">
+                <language>pseudocode</language>
+                <body>followLineAndMonitorMarkers()</body>
+              </doActivity>
+            </subvertex>
             <subvertex xmi:type="uml:State" xmi:id="_TOIo4OkOEfGet-f1W4k-Hw" name="HANDLE_JUNCTION">
               <doActivity xmi:type="uml:OpaqueBehavior" xmi:id="_pgbM8OkTEfGmF6OFxmc3zQ" name="ExecuteTurn">
                 <language>pseudocode</language>
